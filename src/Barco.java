@@ -13,4 +13,8 @@ public class Barco {
         return !pasajeros.isEmpty();
     }
 
+    public List<Pasajero> getPasajeros() {
+        return pasajeros;
+    }
+
 }
