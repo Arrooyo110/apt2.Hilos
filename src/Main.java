@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
         //Completar Codigo
-        //Creamos array de pasajeros para el barco
         ArrayList pasajeros = new ArrayList();
 
         //creamos las balsas
@@ -16,16 +15,15 @@ public class Main {
         Balsa Deimos	 = new Balsa("Deimos",4,4);
         Balsa Expedicion	 = new Balsa("Expedicion",5,8);
 
-        //Bucle para crear los 352 pasajeros de forma aleatoria
+        //Bucle pasajeros de forma aleatoria
         for (int i = 0; i < 352; i++) {
             pasajeros.add(new Pasajero(i, (int) (Math.random()*4)+1));
         }
 
 
 
-        //Construimos barco con el array pasajeros
+        //Construimos barco
         Barco barco = new Barco(pasajeros);
-
 
 
         //Crear rescates
@@ -44,16 +42,11 @@ public class Main {
         Thread hiloExpedicion = new Thread(rescate5);
 
 
-
         hiloAcasta.start();
         hiloBanff.start();
         hiloCadiz.start();
         hiloDeimos.start();
         hiloExpedicion.start();
-
-
-        //rescate1.run();
-        //rescate2.run();
 
     }
 }
