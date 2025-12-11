@@ -7,7 +7,7 @@ public class Rescate implements Runnable {
     private Semaphore semaphore;
 
 
-    public Rescate(Balsa acasta, Barco barco, Semaphore semaphore) {
+    public Rescate(Balsa balsa, Barco barco, Semaphore semaphore) {
         this.balsa = balsa;
         this.barco = barco;
         this.semaphore = semaphore;
